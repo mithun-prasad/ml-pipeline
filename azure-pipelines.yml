@@ -20,7 +20,3 @@ steps:
     azureSubscription: miprasad
     scriptLocation: scriptPath
     scriptPath: TrainOnLocalEnv.py
-- task: PublishBuildArtifacts@1
-  inputs:
-    pathtoPublish: '$(Build.SourcesDirectory)/output.txt'
-    artifactName: model_output
