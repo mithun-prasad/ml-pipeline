@@ -7,7 +7,7 @@ steps:
 - task: AzureCLI@1
 displayName: 'Install Azure ML extension'
 inputs:
-    azureSubscription: larrymltest
+    azureSubscription: miprasad
     scriptLocation: scriptPath
     scriptPath: TrainOnLocalEnv.py
 
