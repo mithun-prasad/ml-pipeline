@@ -1,3 +1,5 @@
+# Train an ML model and upload the output of the training process
+
 pool:
 vmImage: 'Ubuntu 16.04'
 
@@ -5,7 +7,7 @@ steps:
 - task: AzureCLI@1
 displayName: 'Install Azure ML extension'
 inputs:
-    azureSubscription: miprasad
+    azureSubscription: larrymltest
     scriptLocation: scriptPath
     scriptPath: TrainOnLocalEnv.py
 
