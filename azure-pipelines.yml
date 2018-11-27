@@ -12,6 +12,7 @@ steps:
     architecture: 'x64'
 - script: |
     pip install azureml
+    pip install azureml.core
   displayName: 'Install prerequisites'
 - task: PythonScript@0
   displayName: 'Export project path'
