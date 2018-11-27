@@ -10,6 +10,9 @@ steps:
   inputs:
     versionSpec: 3.5
     architecture: 'x64'
+- script: |
+    pip install azureml
+  displayName: 'Install prerequisites'
 - task: PythonScript@0
   displayName: 'Export project path'
   inputs:
