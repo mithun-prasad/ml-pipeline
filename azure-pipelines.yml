@@ -19,7 +19,7 @@ steps:
   inputs:
     azureSubscription: miprasad
     scriptLocation: scriptPath
-    scriptPath: TrainOnLocalEnv.py
+    scriptPath: TrainOnVM.py
 - script: |
     python code/testing/data_test.py data/diabetes_bad_schema.csv
   displayName: 'Test Schema'
