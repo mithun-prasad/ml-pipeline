@@ -56,8 +56,8 @@ print(dirpath)
 
 
 # register the model
-# run.log_model(file_name = model_name)
-# print('Registered the model {} to run history {}'.format(model_name, run.history.name))
+run.log_model(file_name = model_name)
+print('Registered the model {} to run history {}'.format(model_name, run.history.name))
 
 
 
