@@ -23,3 +23,7 @@ steps:
 - script: |
     python code/testing/data_test.py data/diabetes_bad_schema.csv
   displayName: 'Test Schema'
+- task: PublishTestResults@2
+  inputs:
+    testResultsFiles: '**/test-*.xml'
+    testRunTitle: 'Publish test results for Python $(python.version)'
