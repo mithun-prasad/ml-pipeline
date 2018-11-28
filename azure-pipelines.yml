@@ -21,9 +21,9 @@ steps:
     scriptLocation: scriptPath
     scriptPath: TrainOnLocalEnv.py
 - script: |
-    python code/testing/data_test.py data/diabetes_bad_schema.csv
+    python code/testing/data_test.py data/diabetes_bad_schema.csv >test_results.txt
   displayName: 'Test Schema'
 - task: PublishTestResults@2
   inputs:
-    testResultsFiles: '**/test-*.xml'
+    testResultsFiles: 'code/testing/test_results.txt'
     testRunTitle: 'Publish test results for Python $(python.version)'
