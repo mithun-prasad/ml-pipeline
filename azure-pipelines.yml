@@ -15,7 +15,7 @@ steps:
     pip install azureml.core
   displayName: 'Install prerequisites'
 - task: PythonScript@0
-  displayName: 'Export project path'
+  displayName: 'Train on Local Env'
   inputs:
     azureSubscription: miprasad
     scriptLocation: scriptPath
