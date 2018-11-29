@@ -20,7 +20,7 @@ steps:
     azureSubscription: miprasad
     scriptLocation: scriptPath
     scriptPath: TrainOnLocalEnv.py
-- task: PythonScript@
+- task: PythonScriptEvaluate@
   displayName: 'Evaluate Model'
   inputs:
     azureSubscription: miprasad
