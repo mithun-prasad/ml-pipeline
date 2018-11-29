@@ -14,12 +14,12 @@ steps:
     pip install azureml
     pip install azureml.core
   displayName: 'Install prerequisites'
-- task: AzureCLI@1
-  displayName: 'Train on VM'
+- task: PythonScript@0
+  displayName: 'Export project path'
   inputs:
     azureSubscription: miprasad
     scriptLocation: scriptPath
-    scriptPath: TrainOnVM.py
+    scriptPath: TrainOnLocalEnv.py
 - script: |
     python code/testing/data_test.py data/diabetes_bad_schema.csv
   displayName: 'Test Schema'
