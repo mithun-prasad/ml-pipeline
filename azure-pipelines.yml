@@ -39,6 +39,13 @@ steps:
     scriptLocation: scriptPath
     scriptPath: CreateScoringImage.py
     failOnStandardError: true
+- task: PythonScript@0
+  displayName: 'Deploy to ACI'
+  inputs:
+    azureSubscription: miprasad
+    scriptLocation: scriptPath
+    scriptPath: DeployOnACI.py
+    failOnStandardError: true
 - script: |
     python code/testing/data_test.py data/diabetes_bad_schema.csv
   displayName: 'Test Schema'
