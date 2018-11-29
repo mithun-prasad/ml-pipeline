@@ -20,12 +20,6 @@ steps:
     azureSubscription: miprasad
     scriptLocation: scriptPath
     scriptPath: TrainOnLocalEnv.py
-- task: PythonScriptEvaluate@
-  displayName: 'Evaluate Model'
-  inputs:
-    azureSubscription: miprasad
-    scriptLocation: scriptPath
-    scriptPath: EvaluateModel.py
 - script: |
     python code/testing/data_test.py data/diabetes_bad_schema.csv
   displayName: 'Test Schema'
