@@ -21,7 +21,7 @@ steps:
     scriptLocation: scriptPath
     scriptPath: TrainOnLocalEnv.py
 - task: PythonScript@0
-  displayName: 'Register'
+  displayName: 'Register Model'
   inputs:
     azureSubscription: miprasad
     scriptLocation: scriptPath
