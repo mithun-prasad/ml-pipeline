@@ -46,6 +46,13 @@ steps:
     scriptLocation: scriptPath
     scriptPath: DeployOnACI.py
     failOnStandardError: true
+- task: PythonScript@0
+  displayName: 'Test ACI Webservice'
+  inputs:
+    azureSubscription: miprasad
+    scriptLocation: scriptPath
+    scriptPath: AciWebserviceTest.py
+    failOnStandardError: true
 - script: |
     python code/testing/data_test.py data/diabetes_bad_schema.csv
   displayName: 'Test Schema'
