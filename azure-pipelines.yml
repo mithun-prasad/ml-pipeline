@@ -32,6 +32,12 @@ steps:
     azureSubscription: miprasad
     scriptLocation: scriptPath
     scriptPath: RegisterModel.py
+- task: AzureCLI@1
+  displayName: 'Create Scoring Docker Image'
+  inputs:
+    scriptLocation: inlineScript
+    inlineScript: 'python CreateScoringImage.py'
+    failOnStandardError: true
 - script: |
     python code/testing/data_test.py data/diabetes_bad_schema.csv
   displayName: 'Test Schema'
