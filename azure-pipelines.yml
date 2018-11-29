@@ -21,6 +21,12 @@ steps:
     scriptLocation: scriptPath
     scriptPath: TrainOnLocalEnv.py
 - task: PythonScript@0
+  displayName: 'Evaluate Production Model with Newly trained model'
+  inputs:
+    azureSubscription: miprasad
+    scriptLocation: scriptPath
+    scriptPath: EvaluateModel.py
+- task: PythonScript@0
   displayName: 'Register Model'
   inputs:
     azureSubscription: miprasad
