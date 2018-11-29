@@ -20,6 +20,12 @@ steps:
     azureSubscription: miprasad
     scriptLocation: scriptPath
     scriptPath: TrainOnLocalEnv.py
+- task: PythonScript@0
+  displayName: 'Register'
+  inputs:
+    azureSubscription: miprasad
+    scriptLocation: scriptPath
+    scriptPath: RegisterModel.py
 - script: |
     python code/testing/data_test.py data/diabetes_bad_schema.csv
   displayName: 'Test Schema'
